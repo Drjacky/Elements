@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/data_item_cnsMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/data_list_item_bg">
+
+  <TextView
+      android:id="@+id/data_list_item_txtTitle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_marginStart="8dp"
+      android:fontFamily="sans-serif-medium"
+      android:gravity="left"
+      android:textColor="@color/colorAccent"
+      android:textSize="@dimen/data_list_item_txtTitle_size"
+      android:textStyle="bold"
+      android:ellipsize="end"
+      android:maxLines="1"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/data_list_item_imgThumbnail"
+      app:layout_constraintTop_toTopOf="@+id/data_list_item_imgThumbnail"
+      tools:ignore="UnusedAttribute"
+      tools:layout_constraintLeft_creator="1"
+      tools:layout_constraintTop_creator="1"
+      tools:text="@string/data_list_item_txtTitle" />
+
+  <ImageView
+      android:id="@+id/data_list_item_imgThumbnail"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:minHeight="128dp"
+      android:minWidth="128dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:layout_constraintLeft_creator="1"
+      tools:layout_constraintTop_creator="1" />
+
+  <TextView
+      android:id="@+id/data_list_item_txtDescription"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:layout_marginRight="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginTop="8dp"
+      android:fontFamily="sans-serif-medium"
+      android:textColor="@color/colorPrimaryDark"
+      android:textSize="@dimen/data_list_item_txtDescription_size"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:gravity="left"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/data_list_item_imgThumbnail"
+      app:layout_constraintTop_toBottomOf="@+id/data_list_item_imgThumbnail"
+      tools:ignore="UnusedAttribute"
+      tools:layout_constraintLeft_creator="1"
+      tools:layout_constraintTop_creator="1"
+      tools:text="@string/data_list_item_txtTitle" />
+
+</android.support.constraint.ConstraintLayout>

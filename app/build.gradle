@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "26.0.3"
+    defaultConfig {
+        applicationId "ir.hosseinabbasi.elements"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher"
+            ]
+            buildConfigField("String", "BASE_URL", "\"https://docs.google.com/spreadsheet/\"")
+        }
+
+        debug {
+            minifyEnabled false
+            debuggable true
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-DEBUG"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher"
+            ]
+            buildConfigField("String", "BASE_URL", "\"https://docs.google.com/spreadsheet/\"")
+            signingConfig android.signingConfigs.debug
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // Android Support libs
+    [
+            'design',
+            'support-v4',
+            'appcompat-v7',
+            'recyclerview-v7',
+            'cardview-v7',
+            'support-annotations'
+    ].each {
+        compile "com.android.support:${it}:${supportVersion}"
+    }
+    // network
+    compile "com.squareup.retrofit2:retrofit:${retrofit2Version}"
+    compile "com.squareup.retrofit2:adapter-rxjava2:${retrofit2Version}"
+    compile 'com.squareup.okio:okio:1.13.0'
+    // parser
+    compile 'com.opencsv:opencsv:4.0'
+    //compile 'com.googlecode:openbeans:1.0'
+    // dependency injection
+    compile 'javax.inject:javax.inject:1'
+    compile "com.google.dagger:dagger:${daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${daggerVersion}"
+    provided "com.google.dagger:dagger-compiler:${daggerVersion}"
+    provided 'javax.annotation:jsr250-api:1.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    // reactive
+    compile 'io.reactivex.rxjava2:rxjava:2.1.4'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    // logger
+    compile 'com.jakewharton.timber:timber:4.5.1'
+    // ui
+    compile "com.squareup.picasso:picasso:${picassoVersion}"
+    compile "com.jakewharton:butterknife:${butterknifeVersion}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${butterknifeVersion}"
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:multidex:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}

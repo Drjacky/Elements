@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    android:background="@drawable/data_list_item_bg"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/fragment_detail_imgOriginal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:maxHeight="300dp"
+        android:maxWidth="300dp"
+        android:minHeight="@dimen/fragment_detail_photo_height"
+        android:minWidth="@dimen/fragment_detail_photo_height"
+        android:scaleType="centerCrop"
+        card_view:layout_constraintBottom_toTopOf="@+id/fragment_detail_txtTitle"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_detail_txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:padding="@dimen/fragment_detail_txtTitle_padding"
+        android:textColor="@color/fragment_detail_txtPhotoTitle_color"
+        android:textSize="@dimen/fragment_detail_txtTitle_size"
+        card_view:layout_constraintBottom_toTopOf="@+id/fragment_detail_txtDescription"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_detail_txtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="left"
+        android:padding="@dimen/fragment_detail_txtDescription_padding"
+        android:textColor="@color/fragment_detail_txtPhotoDescription_color"
+        android:textSize="@dimen/fragment_detail_txtDescription_size"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

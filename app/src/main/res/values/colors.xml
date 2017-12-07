@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black_effective">#2a2a2a</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Data Fragment -->
+    <color name="fragment_data_lnrMain_bg">#f4f4f4</color>
+    <color name="data_item_lnrMain_bg">#FFFFFF</color>
+    <color name="data_item_txtTitle_color">#000000</color>
+
+    <!-- Detail Fragment -->
+    <color name="fragment_detail_txtPhotoTitle_color">#4c4c4c</color>
+    <color name="fragment_detail_txtPhotoDescription_color">#4c4c4c</color>
+    <color name="fragment_detail_lnrMain">#FFFFFF</color>
+
+</resources>

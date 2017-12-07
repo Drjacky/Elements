@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Elements</string>
+
+    <string name="error_general">An error occurred!</string>
+    <string name="error_save_to_disk">An error occurred through download data!</string>
+    <string name="error_internet">Connect to the Internet!</string>
+
+    <!-- Data Fragment -->
+    <string name="data_list_item_txtTitle">Default Title</string>
+    <string name="data_item_txtTitle">Default Title</string>
+</resources>
